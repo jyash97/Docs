@@ -4,7 +4,7 @@ meta_title: 'Using Pages in Ghost - Core Concepts'
 meta_description: 'Decide whether your content is a page or a post with one click - Learn more about static content with Ghost!'
 keywords:
     - concepts
-    - ghost
+    - appbaseio
     - publishing
     - pages
 sidebar: 'docs'

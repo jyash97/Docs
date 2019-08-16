@@ -10,20 +10,15 @@ export const getAuthorProperties = (primaryAuthor, fetchAuthorData) => {
 			primaryAuthor.twitter
 				? `https://twitter.com/${_.trimStart(primaryAuthor.twitter, `@`)}/`
 				: null,
-			primaryAuthor.facebook ? `https://www.facebook.com/${primaryAuthor.facebook}/` : null,
 		);
 	} else {
-		authorProfiles.push(
-			`https://ghost.org/`,
-			`https://twitter.com/ghost/`,
-			`https://www.facebook.com/ghost/`,
-		);
+		authorProfiles.push(`https://appbase.io/`, `https://twitter.com/appbaseio/`);
 	}
 
 	authorProfiles = _.compact(authorProfiles);
 
 	return {
-		name: fetchAuthorData ? primaryAuthor.name : `Ghost`,
+		name: fetchAuthorData ? primaryAuthor.name : `Appbaseio`,
 		sameAsArray: authorProfiles.length ? `["${_.join(authorProfiles, `", "`)}"]` : null,
 		image: fetchAuthorData ? primaryAuthor.profile_image : null,
 	};

@@ -13,6 +13,8 @@ import { HomeHeader, GuideBox } from '../components/home';
 import { Spirit } from '../styles/spirit-styles';
 import guides from '../utils/guides';
 
+const imagePrefix = 'https://opensource.appbase.io/reactivesearch/images/support';
+
 const HomePage = ({ data, location }) => {
 	// Add meta title and description for this page here to overwrite the site meta data as set in the config
 
@@ -310,55 +312,62 @@ const HomePage = ({ data, location }) => {
 							All libraries and tools, integrated with Appbase.
 						</p>
 						<Grid
-							className="mt5"
 							size={4}
 							lgSize={2}
 							smSize={1}
 							gutter="20px"
 							lgGutter="12px"
+							className="mt5"
+							smGutter="0px"
 						>
-							<Card className="br2 shadow-2 box-shadow-hover" big>
-								<img src="https://i.imgur.com/5pu5hmQ.png" alt="Documentation" />
-								<h3 className={`${Spirit.h4} fw6 darkgrey hover-midgrey`}>
-									Documentation
-								</h3>
-								<p className={`${Spirit.p} f5-l grey`}>
+							<Card big href="https://opensource.appbase.io/reactive-manual">
+								<img src={`${imagePrefix}/Documentation.svg`} alt="Documentation" />
+								<h3 className={`${Spirit.h4} mb3 fw6 darkgrey`}>Documentation</h3>
+								<p>
 									Dive in to learn all about{' '}
-									<span style={{ color: '#0033FF' }}>Reactive X</span> development
-									for all platforms.
+									<span
+										style={{
+											color: '#0033FF',
+										}}
+									>
+										Reactive X
+									</span>{' '}
+									development for all platforms.
 								</p>
 							</Card>
-							<Card className="br2 shadow-2 box-shadow-hover" big>
-								<img src="https://i.imgur.com/5pu5hmQ.png" alt="Documentation" />
-								<h3 className={`${Spirit.h4} fw6 darkgrey hover-midgrey`}>
-									Documentation
+							<Card big href="https://medium.appbase.io">
+								<img src={`${imagePrefix}/Tutorials.svg`} alt="Tutorials" />
+								<h3 className={`${Spirit.h4} mb3 fw6 darkgrey hover-midgrey`}>
+									Tutorials
 								</h3>
-								<p className={`${Spirit.p} f5-l grey`}>
-									Dive in to learn all about{' '}
-									<span style={{ color: '#0033FF' }}>Reactive X</span> development
-									for all platforms.
+								<p>Go from scratch to a full app with these tutorial guides.</p>
+							</Card>
+							<Card big href="https://appbase.io/support">
+								<img src={`${imagePrefix}/Support.png`} alt="Support" />
+								<h3 className={`${Spirit.h4} mb3 fw6 darkgrey hover-midgrey`}>
+									Support
+								</h3>
+								<p>
+									Get first-class support from appbase.io for your{' '}
+									<span
+										style={{
+											color: '#0033FF',
+										}}
+									>
+										Reactive X
+									</span>{' '}
+									app.
 								</p>
 							</Card>
-							<Card className="br2 shadow-2 box-shadow-hover" big>
-								<img src="https://i.imgur.com/5pu5hmQ.png" alt="Documentation" />
-								<h3 className={`${Spirit.h4} fw6 darkgrey hover-midgrey`}>
-									Documentation
+							<Card big href="https://gitter.im/appbaseio/reactivesearch">
+								<img src={`${imagePrefix}/Gitter.svg`} alt="Gitter" />
+								<h3 className={`${Spirit.h4} mb3 fw6 darkgrey hover-midgrey`}>
+									Gitter
 								</h3>
-								<p className={`${Spirit.p} f5-l grey`}>
-									Dive in to learn all about{' '}
-									<span style={{ color: '#0033FF' }}>Reactive X</span> development
-									for all platforms.
-								</p>
-							</Card>
-							<Card className="br2 shadow-2 box-shadow-hover" big>
-								<img src="https://i.imgur.com/5pu5hmQ.png" alt="Documentation" />
-								<h3 className={`${Spirit.h4} fw6 darkgrey hover-midgrey`}>
-									Documentation
-								</h3>
-								<p className={`${Spirit.p} f5-l grey`}>
-									Dive in to learn all about{' '}
-									<span style={{ color: '#0033FF' }}>Reactive X</span> development
-									for all platforms.
+								<p>
+									Join our community on Gitter. We
+									{"'"}
+									re always around and happy to help.
 								</p>
 							</Card>
 						</Grid>
